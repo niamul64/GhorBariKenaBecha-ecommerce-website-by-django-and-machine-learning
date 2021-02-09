@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block head %}
+
+
+
+{% endblock%}
+
+
+
+
+{% block body1 %}
+<form  method="post">
+    {% csrf_token %}
+{% if error %}
+<p class="errorColor"> {{error}} </p>
+{% endif %}
+
+        <p class="refont">User Name:</p>
+        <input class="refont"  type="text" name="username" placeholder="Username" required><br>
+        <p class="refont">Password:</p>
+        <input class="refont" type="password" name="password" placeholder="Password" required><br><br>
+        <input class="refont"  type="submit" value="Login"> <p class="refont" >Don't have an account?<a href="{% url 'signup' %}">Sign UP</a></p>
+
+
+</form>
+
+
+
+{% endblock%}
+

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block head %}
+
+
+
+{% endblock%}
+
+
+
+
+{% block body1 %}
+<form  method="post" action="{% url 'signup' %}">
+      {% csrf_token %}
+{% if error %}
+<p class="errorColor"  > {{error}} </p>
+{% endif %}
+
+    {{form1|crispy}}
+    {{form2|crispy}}
+    <input class="refont" type="submit" value="Sign Up">
+
+
+</form>
+
+
+
+{% endblock%}
+
