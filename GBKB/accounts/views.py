@@ -9,6 +9,7 @@ from django.contrib.auth import authenticate, login
 from .models import ExtentionUser, PostAd
 from .forms import UserReg, ExtentUser
 # Create your views here.
+
 def signin(request):
     if request.method == 'POST':
         user =auth.authenticate(username=request.POST['username'],password=request.POST['password'])
@@ -22,7 +23,6 @@ def signin(request):
 def signout(request):
     if request.method == 'POST':
         auth.logout(request)
-
     return redirect('home')
 
 def signup(request):
@@ -36,16 +36,22 @@ def signup(request):
 
         if form1.is_valid() and form2.is_valid() and len(form2.cleaned_data['mobileNumber'])==11 :
 
-            userSaved=form1.save()
-            ExtentionUser(userID =userSaved, mobileNumber=form2.cleaned_data['mobileNumber']).save()
-            auth.login(request, userSaved)
-            return redirect('home')
+            email_exist = User.objects.filter(email=form1.cleaned_data['email'])
+            if email_exist:
+
+                return render(request, 'accounts/signup.html',
+                              {'error': "fill the form correctly and choose a unique email", 'form1': form1,
+                               'form2': form2})
+            else:
+                userSaved = form1.save()
+                ExtentionUser(userID=userSaved, mobileNumber=form2.cleaned_data['mobileNumber']).save()
+                auth.login(request, userSaved)
+                return redirect('home')
         else:
-            return render(request, 'signup.html',{'error': "fill the form correctly and choose a unique username", 'form1': form1, 'form2': form2})
+            return render(request, 'accounts/signup.html',{'error': "fill the form correctly and choose a unique username", 'form1': form1, 'form2': form2})
     form1=UserReg()
     form2=ExtentUser()
     return render(request, 'accounts/signup.html', {'error':e , 'form1':form1,'form2':form2})
-
 
 
 def home(request):
