@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block head %}
+
+<link rel="stylesheet" type="text/css" href="static/css js/varifivcation.css">
+
+{% endblock%}
+
+
+
+
+{% block body1 %}
+<p class="text-success" >AD Posting:</p>
+<div class="card boxVari">
+<form  method="post" action="postAd">
+      {% csrf_token %}
+{% if error %}
+<p class="text-danger"  > {{error}} </p>
+{% endif %}
+    <div class="" align="">
+    {{form |crispy}}
+
+    <br>
+
+    <input class="refont" type="submit" value="Post My AD">
+
+
+</div>
+</form>
+</div>
+
+
+{% endblock%}
+

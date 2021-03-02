@@ -9,7 +9,8 @@ urlpatterns = [
     path('activation',views.activation, name='activation'),
     path('confirmActivation',views.confirmActivation, name='confirmActivation'),
     path('', views.home, name='home'),
-    # path('share', views.share, name='share'),
+
+    path('postAd', views.postAd, name='postAd'),
     #
     # path('myCollection', views.myCollection, name='myCollection'),
     # path('delete/myCollection/', views.myCollection, name='delete/myCollection'),

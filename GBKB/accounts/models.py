@@ -45,17 +45,17 @@ class PostAd(models.Model):                # for saving the shared news in datab
     img1 = models.ImageField(upload_to='images/post', default='demo.png',blank=True)
     img2 = models.ImageField(upload_to='images/post', default='demo.png',blank=True)
     img3 = models.ImageField(upload_to='images/post', default='demo.png',blank=True)
-    sqft = models.IntegerField(default=1, null=False , blank= False)
-    washRoom = models.IntegerField(default=1, null=False , blank= False)
-    bedRoom = models.IntegerField(default=1, null=False , blank= False)
+    sqft = models.IntegerField(default=None, null=False , blank= False)
+    washRoom = models.IntegerField(default=None, null=False , blank= False)
+    bedRoom = models.IntegerField(default=None, null=False , blank= False)
     description = models.TextField(max_length=120, default="", null=True, blank=True)
 
-    roadSize = models.IntegerField(default=1, null=False, blank=False)
+    roadSize = models.IntegerField(default=None, null=False, blank=False)
     lift = models.IntegerField(null=False , blank= False, choices=(
         (None, 'select'),
         (0,'No Lift'),
         (1,'Lift service available'),
         ))
-    floor = models.IntegerField(default=1, null=False, blank=False)
+    floor = models.IntegerField(default=None, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
-    price = models.IntegerField(default=1, null=False, blank=False)
+    price = models.IntegerField(default=None, null=False, blank=False)
