@@ -1,0 +1,18 @@
+.boxEmail {
+
+-moz-box-shadow:10px 10px 5px #000000;
+-webkit-box-shadow:10px 10px 5px #000000;
+box-shadow:10px 10px 5px #000000;
+padding: 2px;
+
+}
+
+.boxVari {
+
+border:dashed 5px #000000;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+padding: 2px;
+
+}

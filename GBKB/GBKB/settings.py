@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'accounts',
     'predictor',
     'crispy_forms',
+    'verify_email',
 
 ]
 
@@ -122,3 +123,16 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL ='/media/'
 
+
+# smtp configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'ghorbarikenabechadhaka@gmail.com'
+EMAIL_HOST_PASSWORD = 'cse401software'
+
+DEFAULT_FROM_EMAIL = 'ghorbarikenabechadhaka@gmail.com'
+
+#Tutorial
+# https://www.youtube.com/watch?v=UH8oHNDfTyQ

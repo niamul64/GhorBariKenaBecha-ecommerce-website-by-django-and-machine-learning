@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block head %}
+
+varifivcation.css
+<link rel="stylesheet" type="text/css" href="static/css js/varifivcation.css">
+{% endblock%}
+
+
+
+
+{% block body1 %}
+<div class="card boxVari" >
+<form  method="post" action="confirmActivation">
+    {% csrf_token %}
+{% if message %}
+<p class="text-success"> {{message}} </p>
+{% endif %}
+        <p class="">Activate your account:</p>
+        <p class="">Check your email address:</p>
+        <p class="">A Activation Code have sent to your email address:</p>
+        <p class="">Enter the Activation Code:</p>
+        <input class=""  type="text" name="code" placeholder="Activation Code" required><br>
+
+{% if error %}
+<p class="text-danger"> {{error}} </p>
+{% endif %}
+        <input class=""  type="submit" value="Submit">
+        <p class="" >want to resend the code?<a href="{% url 'activation' %}">Re-send</a></p>
+</form>
+</div>
+
+
+
+<!--email button-->
+<!--collapse-->
+<p>
+  <a class="btn btn-primary mt-2 " data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+   Want to change Email?
+  </a>
+{% if error2 %}
+<p class="text-danger"> {{error2}} </p>
+{% endif %}
+
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+
+      <div class="card boxEmail">
+<form  method="post" action="activation">
+    {% csrf_token %}
+
+
+        <p class="refont"> </p>
+
+        <input class="form-control"  type="email" name="email" placeholder="New Email: name@example.com" required><br>
+
+        <input class=""  type="submit" value="Submit">
+
+
+</form>
+</div>
+
+  </div>
+</div>
+<!--collapse-->
+
+
+
+{% endblock%}
+

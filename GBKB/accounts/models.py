@@ -7,6 +7,11 @@ class ExtentionUser(models.Model):  # extra fields for user
     userID = models.ForeignKey(User, on_delete=models.CASCADE)
     mobileNumber= models.CharField(max_length=120, default="" , null=False , blank= False)
     image = models.ImageField(upload_to='images/post', default='demo.png', blank=True)
+    activation = models.BooleanField(default=False)
+    code= models.IntegerField(default=1, null=True , blank= True)
+
+    def __str__(self):
+        return self.userID.username
 
 
 class PostAd(models.Model):                # for saving the shared news in database
