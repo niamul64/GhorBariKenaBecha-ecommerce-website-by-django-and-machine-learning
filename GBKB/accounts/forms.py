@@ -21,4 +21,6 @@ class PostAdForm(forms.ModelForm):  # ExtentionUser model form formating for fro
 
     class Meta:
         model = PostAd
-        fields = ('title', 'location', 'img1','img2','img3','sqft','washRoom','bedRoom','description','roadSize','lift','floor','price' )
+
+        exclude = ["userID"]
+

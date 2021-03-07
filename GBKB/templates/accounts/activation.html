@@ -12,6 +12,7 @@ varifivcation.css
 
 
 {% block body1 %}
+  <p class="p-1">welcome {{ user.username }}</p>
 <div class="card boxVari" >
 <form  method="post" action="confirmActivation">
     {% csrf_token %}

@@ -68,12 +68,14 @@ def signup(request):
 def home(request):
     if request.user.is_authenticated:
         details = get_object_or_404(ExtentionUser, userID=request.user)
-
         if details.activation!=True:
             return redirect('activation')
+
+
     Ads=PostAd.objects.all().order_by("-date")
 
-    return render(request, 'home.html',{'ads':Ads})
+
+    return render(request, 'home.html',{'obj':Ads})
 
 
 def activation(request):
@@ -144,16 +146,27 @@ def postAd(request):
 
     e=''
     if request.method == 'POST':
-        form = PostAdForm(request.POST)
 
+        form = PostAdForm(request.POST, request.FILES)
         if form.is_valid():
-            PostAd(userID=request.user, title=form.cleaned_data['title'], location=form.cleaned_data['location'], img1=form.cleaned_data['img1'], img2=form.cleaned_data['img2'], img3=form.cleaned_data['img3']
-                   , sqft=form.cleaned_data['sqft'],washRoom=form.cleaned_data['washRoom'],bedRoom=form.cleaned_data['bedRoom'], description=form.cleaned_data['description'],roadSize=form.cleaned_data['roadSize'], lift=form.cleaned_data['lift'], floor=form.cleaned_data['floor'], price=form.cleaned_data['price']).save()
+
+            frm=form.save(commit=False)
+            frm.userID=request.user
+            frm.save()
+            # AD =PostAd(userID=request.user, title=form.cleaned_data['title'], location=form.cleaned_data['location'], sqft=form.cleaned_data['sqft'],washRoom=form.cleaned_data['washRoom'],bedRoom=form.cleaned_data['bedRoom'], description=form.cleaned_data['description'],roadSize=form.cleaned_data['roadSize'], lift=form.cleaned_data['lift'], floor=form.cleaned_data['floor'], price=form.cleaned_data['price'])
+            # print ("AD saved")
+            # if request.FILES.get['img1']:
+            #     print("got img")
+            #     AD.img1 = request.FILES['img1']
+            # if request.FILES.get('img2'):
+            #     AD.img2 = request.FILES['img2']
+            # if request.FILES.get('img3'):
+            #     AD.img3 = request.FILES['img3']
+            # AD.save()
 
             Ads = PostAd.objects.all().order_by("-date")
 
-            return render(request, 'home.html', {'ads': Ads,'message':"Your AD is posted"})
-
+            return render(request, 'home.html', {'obj': Ads,'message':"Your AD is posted"})
         else:
             return render(request, 'AdPosting/postAd.html',{'error': "Fill the form correctly", 'form': form})
 
@@ -161,3 +174,7 @@ def postAd(request):
     return render(request, 'AdPosting/postAd.html', {'error':e , 'form':form})
 
 
+def detail(request, pId ):
+    obj = get_object_or_404(PostAd, pk=pId)
+    extendSellerInfo=get_object_or_404(ExtentionUser, userID=obj.userID)
+    return render(request,'AdPosting/detail.html', {'obj': obj,"mobile":extendSellerInfo})

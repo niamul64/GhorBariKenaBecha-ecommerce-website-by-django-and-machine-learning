@@ -6,7 +6,7 @@ from django.utils import timezone
 class ExtentionUser(models.Model):  # extra fields for user
     userID = models.ForeignKey(User, on_delete=models.CASCADE)
     mobileNumber= models.CharField(max_length=120, default="" , null=False , blank= False)
-    image = models.ImageField(upload_to='images/post', default='demo.png', blank=True)
+    image = models.ImageField(upload_to='images/post/', default='demo.png', blank=True)
     activation = models.BooleanField(default=False)
     code= models.IntegerField(default=1, null=True , blank= True)
 

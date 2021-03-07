@@ -3,7 +3,8 @@
 
 
 {% block head %}
-
+<link rel="stylesheet" type="text/css" href="static/css js/varifivcation.css">
+<link rel="stylesheet" type="text/css" href="static/css js/card_box.css">
 {% endblock%}
 
 
@@ -17,11 +18,35 @@
 {% endblock%}
 
 {% block body1 %}
-
+  <p class="p-1">welcome {{ user.username }}</p>
 {% if message %}
 <p class="text-success"> {{message}} </p>
 {% endif %}
 
+<div class="boxVari col-12	col-sm-12	col-md-12	col-lg-12	col-xl-12	col-xxl-12">
+
+{% for i in obj%}
+<div class="card mb-3 boxShadow"  onclick="window.location='{% url 'detail' i.id %}'; "  style=" cursor: pointer;" >
+  <p class="card-header p-2">{{i.title}}</p>
+  <div class="card-body">
+
+      <img src="{{i.img1.url}}" class="img-thumbnail float-left" width="150px" >
+      <div class="">
+      <p class="card-text"> Price: {{i.price}}</p>
+      <p class="card-text"> Sqft: {{i.sqft}}</p>
+      <p class="card-text"> Number of Bed Roms: {{i.bedRoom}}</p>
+      <p class="card-text ">Description: {{i.description}}</p>
+
+      </div>
+
+
+  </div>
+</div>
+{% endfor%}
+
+
+
+</div>
 
 
 {% endblock%}

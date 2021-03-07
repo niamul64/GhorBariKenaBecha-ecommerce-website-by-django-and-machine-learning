@@ -11,18 +11,17 @@
 {% block body1 %}
 <p class="text-success" >AD Posting:</p>
 <div class="card boxVari">
-<form  method="post" action="postAd">
+<form  method="post" action="postAd" enctype="multipart/form-data">
       {% csrf_token %}
 {% if error %}
 <p class="text-danger"  > {{error}} </p>
 {% endif %}
     <div class="" align="">
     {{form |crispy}}
+        <br />
 
-    <br>
 
-    <input class="refont" type="submit" value="Post My AD">
-
+    <input class="btn btn-primary" type="submit" value="Post My AD" />
 
 </div>
 </form>
