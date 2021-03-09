@@ -1,0 +1,8 @@
+.boxShadow {
+
+-moz-box-shadow: 9px 5px 15px #000000;
+-webkit-box-shadow: 9px 5px 15px #000000;
+box-shadow: 9px 5px 15px #000000;
+padding: 2px;
+
+}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block head %}
+
+varifivcation.css
+<link rel="stylesheet" type="text/css" href="static/css js/varifivcation.css">
+{% endblock%}
+
+
+
+
+{% block body1 %}
+<div class="border-2" align="center">
+{% if error %}
+<p class="text-danger"> {{error}} </p>
+{% endif %}
+
+<form  method="post" action="changeEmail">
+    {% csrf_token %}
+
+
+        <p class="refont"> </p>
+
+        <input class="form-control"  type="email" name="email" placeholder="New Email: name@example.com" required><br>
+
+        <input class=""  type="submit" value="Submit">
+
+</form>
+</div>
+{% endblock%}
+

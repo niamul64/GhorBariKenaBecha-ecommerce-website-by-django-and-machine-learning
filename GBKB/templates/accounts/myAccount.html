@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="static/css js/varifivcation.css">
+<link rel="stylesheet" type="text/css" href="static/css js/card_box.css">
+{% endblock%}
+
+
+{% block navleft %}
+
+{% endblock%}
+
+
+{% block navright %}
+
+{% endblock%}
+
+{% block body1 %}
+
+{% if error %}
+<h5 class="text-danger"> {{error}} </h5>
+{% endif %}
+{% if error2 %}
+<h5 class="text-danger"> {{error2}} </h5>
+{% endif %}
+
+<!--Account Detail-->
+<div class="card mb-3 boxShadow border-4"  style=" cursor: pointer;" >
+<h4 class="card-header p-2 bg-dark bg-gradient text-light">User Name: {{request.user.username}}</h4>
+  <div class="card-body">
+
+  <a class="btn btn-danger" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Change Image
+  </a>              {% if message %}
+                    <h5 class="text-success float-right"> {{message}} </h5>
+                    {% endif %}
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+      <form method="POST" action="changeImage" enctype="multipart/form-data">
+{% csrf_token %}
+          <p class="float-left mt-2">Select jpg Image File : </p>
+          <input class="float-left" type="file" name="image" />
+          <input class="btn btn-primary " type="submit" value="Submit" />
+
+      </form>
+  </div>
+</div>
+
+      <img src="{{ex.image.url}}" class="img-thumbnail float-left" width="320px" >
+
+      <div class="">
+          <br>
+      <h5 class="card-text mt-3 mb-1">Email: {{request.user.email}}</h5>
+          <a href="{% url 'changeEmail' %}"><button type="button" class="btn btn-danger mt-1 mb-4">Change Email</button></a>
+          <br>
+
+      <h5 class="card-text mt-3 mb-1">Mobile Number: {{ex.mobileNumber}}</h5>
+
+
+
+            <a class="btn btn-danger" data-bs-toggle="collapse" href="#collapseN" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Change Mobile Number
+  </a>              {% if message2 %}
+                    <h5 class="text-success float-right"> {{message2}} </h5>
+                    {% endif %}
+<div class="collapse" id="collapseN">
+  <div class="card card-body">
+      <form method="POST" action="changeNumber" >
+{% csrf_token %}
+          <p class="float-left mt-2">Insert New 11 digit Number : </p>
+          <input class="float-left" type="text" name="number" />
+          <input class="btn btn-primary " type="submit" value="Submit" />
+
+      </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+  </div>
+</div>
+
+<!--Account Detail-->
+
+
+
+<h5 class="p-1">My ADs: </h5>
+
+
+<div class="boxVari col-12	col-sm-12	col-md-12	col-lg-12	col-xl-12	col-xxl-12 border border-dark">
+
+{% for i in obj%}
+<div class="card mb-3 boxShadow border-3 "  onclick="window.location='{% url 'detail' i.id %}'; "  style=" cursor: pointer;" >
+    <div class="card-header bg-secondary text-white"><h5 class="float-left p-2">{{i.title}}</h5> <a class="" href="{% url 'delete' i.id %}"> <button type="button" class="float-right btn btn-danger">Delete this AD</button> </a></div>
+  <div class="card-body">
+
+      <img src="{{i.img1.url}}" class="img-thumbnail float-left" width="150px" >
+      <div class="">
+      <p class="card-text"> Price: {{i.price}}</p>
+      <p class="card-text"> Sqft: {{i.sqft}}</p>
+      <p class="card-text"> Number of Bed Roms: {{i.bedRoom}}</p>
+      <p class="card-text ">Description: {{i.des}} .....</p>
+
+      </div>
+
+
+  </div>
+</div>
+{% endfor%}
+
+
+
+</div>
+
+
+{% endblock%}

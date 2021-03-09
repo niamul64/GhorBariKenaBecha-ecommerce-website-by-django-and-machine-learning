@@ -35,7 +35,7 @@
   </head>
   <body>
     
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark bg-gradient">
   <div class="container-fluid">
 <!-- Home-->
     <a class="navbar-brand" href="{% url 'home' %}">GBKB</a>
@@ -47,7 +47,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
 {% if request.user.is_authenticated %}
          <li class="nav-item active">
-          <a class="nav-link btn-outline-success" aria-current="page" href="#">My Account</a>
+          <a class="nav-link btn-outline-success" aria-current="page" href="{% url 'myAccount' %}">My Account</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link btn-outline-success" aria-current="page" href="JavaScript:{document.getElementById('logout').submit()}" onclick="">Sign Out</a>

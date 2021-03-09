@@ -79,34 +79,29 @@ def home(request):
 
 
 def activation(request):
-
-    m=""
+    m = ""
     if request.method == 'POST':
         mail = request.POST['email']
 
         email_exist = User.objects.filter(email=mail)
         if email_exist:
             return render(request, 'accounts/activation.html',
-                              {'error2': "Error: enter a unique email", })
+                          {'error2': "Error: enter a unique email", })
         else:
             user = get_object_or_404(User, id=request.user.id)
-            user.email=mail
+            user.email = mail
             user.save()
-            m="New email address has saved"
-
-
-
-
+            m = "New email address has saved"
 
     details = get_object_or_404(ExtentionUser, userID=request.user)
-    cod=0
+    cod = 0
     for i in range(6):
-        cod=cod+random.randint(0,10)
-        cod=cod*10
+        cod = cod + random.randint(0, 10)
+        cod = cod * 10
 
-    details.code=cod
+    details.code = cod
 
-    body= 'Activation Code: '+str(cod)
+    body = 'Activation Code: ' + str(cod)
 
     details.save()
 
@@ -116,11 +111,9 @@ def activation(request):
         settings.EMAIL_HOST_USER,
         [request.user.email],
         fail_silently=False,
-        )
+    )
 
-
-
-    return render(request,'accounts/activation.html',{'message':m})
+    return render(request, 'accounts/activation.html', {'message': m})
 
 def confirmActivation(request):
     details = get_object_or_404(ExtentionUser, userID=request.user)
@@ -175,6 +168,106 @@ def postAd(request):
 
 
 def detail(request, pId ):
+    if request.user.is_authenticated:
+        details = get_object_or_404(ExtentionUser, userID=request.user)
+        if details.activation!=True:
+            return redirect('activation')
+    else:
+        return redirect('signin')
     obj = get_object_or_404(PostAd, pk=pId)
     extendSellerInfo=get_object_or_404(ExtentionUser, userID=obj.userID)
     return render(request,'AdPosting/detail.html', {'obj': obj,"mobile":extendSellerInfo})
+
+def myAccount(request):
+    if request.user.is_authenticated:
+        details = get_object_or_404(ExtentionUser, userID=request.user)
+        if details.activation!=True:
+            return redirect('activation')
+    else:
+        return redirect('signin')
+
+
+    Ads=PostAd.objects.all().filter(userID=request.user).order_by("-date")
+
+
+    return render(request, 'accounts/myAccount.html',{'obj':Ads, "ex":details})
+
+
+def changeImage(request):
+
+    if request.user.is_authenticated:
+        details = get_object_or_404(ExtentionUser, userID=request.user)
+        if details.activation!=True:
+            return redirect('activation')
+    else:
+        return redirect('signin')
+
+    if request.method == 'POST':
+        if request.FILES.get('image'):
+            details.image = request.FILES['image']
+            details.save()
+            Ads = PostAd.objects.all().filter(userID=request.user).order_by("-date")
+            return render(request, 'accounts/myAccount.html',
+                          {'obj': Ads, "ex": details, "message": "New image saved"})
+    Ads=PostAd.objects.all().filter(userID=request.user).order_by("-date")
+    return render(request, 'accounts/myAccount.html',{'obj':Ads, "ex":details, "error":"Problem, image couldn't change. selsect .jpg image"})
+
+
+
+def changeEmail(request):
+
+    if request.user.is_authenticated:
+        details = get_object_or_404(ExtentionUser, userID=request.user)
+        if details.activation!=True:
+            return redirect('activation')
+    else:
+        return redirect('signin')
+
+    if request.method == 'POST':
+        mail = request.POST['email']
+        print (mail)
+
+        email_exist = User.objects.filter(email=mail)
+        if email_exist:
+            return render(request, 'accounts/changeEmail.html',
+                              {'error': "Error: enter a unique email", })
+
+        else:
+            user = get_object_or_404(User, id=request.user.id)
+            user.email=mail
+            user.save()
+            m="New email address is saved"
+            details.activation=False
+            details.save()
+
+            return redirect('activation')
+    return render(request, 'accounts/changeEmail.html')
+
+
+
+class delete(DeleteView):
+    model=PostAd
+    template_name='AdPosting/delete.html'
+    success_url = 'myAccount/'
+
+
+
+def changeNumber(request):
+
+    if request.user.is_authenticated:
+        details = get_object_or_404(ExtentionUser, userID=request.user)
+        if details.activation!=True:
+            return redirect('activation')
+    else:
+        return redirect('signin')
+
+    if request.method == 'POST':
+        num=request.POST['number']
+        if len(str(num)) >= 11:
+            details.mobileNumber = num
+            details.save()
+            Ads = PostAd.objects.all().filter(userID=request.user).order_by("-date")
+            return render(request, 'accounts/myAccount.html',
+                          {'obj': Ads, "ex": details, "message2": "New Phone Number is saved"})
+    Ads=PostAd.objects.all().filter(userID=request.user).order_by("-date")
+    return render(request, 'accounts/myAccount.html',{'obj':Ads, "ex":details, "error2":"Enter Mobile Number Correctly"})

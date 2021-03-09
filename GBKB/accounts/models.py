@@ -59,3 +59,6 @@ class PostAd(models.Model):                # for saving the shared news in datab
     floor = models.IntegerField(default=None, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
     price = models.IntegerField(default=None, null=False, blank=False)
+
+    def des(self):
+        return self.description[:35]
