@@ -3,6 +3,7 @@
 {% block head %}
 <link rel="stylesheet" type="text/css" href="static/css js/varifivcation.css">
 <link rel="stylesheet" type="text/css" href="static/css js/card_box.css">
+<link rel="stylesheet" type="text/css" href="/static/css js/media_tag.css">
 {% endblock%}
 
 
@@ -36,11 +37,11 @@
                     {% endif %}
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-      <form method="POST" action="changeImage" enctype="multipart/form-data">
+      <form method="POST" action="{% url 'changeImage' %}" enctype="multipart/form-data">
 {% csrf_token %}
-          <p class="float-left mt-2">Select jpg Image File : </p>
-          <input class="float-left" type="file" name="image" />
-          <input class="btn btn-primary " type="submit" value="Submit" />
+          <p class="float-left">Select jpg Image File : </p>
+          <input class="" type="file" name="image" />
+          <input class="btn-primary " type="submit" value="Submit" />
 
       </form>
   </div>
@@ -50,11 +51,11 @@
 
       <div class="">
           <br>
-      <h5 class="card-text mt-3 mb-1">Email: {{request.user.email}}</h5>
+      <h5 class="card-text mt-2 mb-1">Email: {{request.user.email}}</h5>
           <a href="{% url 'changeEmail' %}"><button type="button" class="btn btn-danger mt-1 mb-4">Change Email</button></a>
           <br>
 
-      <h5 class="card-text mt-3 mb-1">Mobile Number: {{ex.mobileNumber}}</h5>
+      <h5 class="card-text mt-2 mb-1">Mobile Number: {{ex.mobileNumber}}</h5>
 
 
 
@@ -65,10 +66,10 @@
                     {% endif %}
 <div class="collapse" id="collapseN">
   <div class="card card-body">
-      <form method="POST" action="changeNumber" >
+      <form method="POST" action="{% url 'changeNumber' %}" >
 {% csrf_token %}
           <p class="float-left mt-2">Insert New 11 digit Number : </p>
-          <input class="float-left" type="text" name="number" />
+          <input class="float-left mt-1 mx-2" type="text" name="number" />
           <input class="btn btn-primary " type="submit" value="Submit" />
 
       </form>
@@ -91,12 +92,12 @@
 
 <!--Account Detail-->
 
-
+<div class="col-12	col-sm-12	col-md-8 col-lg-8 col-xl-8 offset-lg-2">
 
 <h5 class="p-1">My ADs: </h5>
 
 
-<div class="boxVari col-12	col-sm-12	col-md-12	col-lg-12	col-xl-12	col-xxl-12 border border-dark">
+<div class="boxVari  border border-dark">
 
 {% for i in obj%}
 <div class="card mb-3 boxShadow border-3 "  onclick="window.location='{% url 'detail' i.id %}'; "  style=" cursor: pointer;" >
@@ -120,6 +121,6 @@
 
 
 </div>
-
+</div>
 
 {% endblock%}

@@ -5,6 +5,7 @@
 {% block head %}
 <link rel="stylesheet" type="text/css" href="static/css js/varifivcation.css">
 <link rel="stylesheet" type="text/css" href="static/css js/card_box.css">
+<link rel="stylesheet" type="text/css" href="/static/css js/media_tag.css">
 {% endblock%}
 
 
@@ -18,15 +19,16 @@
 {% endblock%}
 
 {% block body1 %}
+<div class="col-12	col-sm-12	col-md-8 col-lg-8 col-xl-8 offset-lg-2">
   <p class="p-1">welcome {{ user.username }}</p>
 {% if message %}
 <p class="text-success"> {{message}} </p>
 {% endif %}
 
-<div class="boxVari col-12	col-sm-12	col-md-12	col-lg-12	col-xl-12	col-xxl-12">
+<div class="boxVari ">
 
 {% for i in obj%}
-<div class="card mb-3 boxShadow"  onclick="window.location='{% url 'detail' i.id %}'; "  style=" cursor: pointer;" >
+<div class="card mb-3 boxShadow "  onclick="window.location='{% url 'detail' i.id %}'; "  style=" cursor: pointer;" >
   <p class="card-header p-2">{{i.title}}</p>
   <div class="card-body">
 
@@ -48,5 +50,5 @@
 
 </div>
 
-
+</div>
 {% endblock%}
