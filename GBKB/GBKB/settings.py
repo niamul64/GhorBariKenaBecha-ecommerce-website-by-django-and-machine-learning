@@ -130,7 +130,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'ghorbarikenabechadhaka@gmail.com'
-EMAIL_HOST_PASSWORD = 'cse401software'
+EMAIL_HOST_PASSWORD = 'cse401softwaredev'
 
 DEFAULT_FROM_EMAIL = 'ghorbarikenabechadhaka@gmail.com'
 
