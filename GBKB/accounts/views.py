@@ -71,11 +71,20 @@ def home(request):
         if details.activation!=True:
             return redirect('activation')
 
+    if request.method == 'GET':
+        se = request.GET.get('search')
+        lo= request.GET.get('location')
+        print (lo, se)
+        if lo:
+            print ("lo")
+        else:
+            pass
+
 
     Ads=PostAd.objects.all().order_by("-date")
 
-
-    return render(request, 'home.html',{'obj':Ads})
+    lo="Location"
+    return render(request, 'home.html',{'obj':Ads,'lo':lo})
 
 
 def activation(request):
