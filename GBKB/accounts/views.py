@@ -71,20 +71,24 @@ def home(request):
         if details.activation!=True:
             return redirect('activation')
 
+    Ads = PostAd.objects.all().order_by("-date")
     if request.method == 'GET':
         se = request.GET.get('search')
         lo= request.GET.get('location')
         print (lo, se)
-        if lo:
-            print ("lo")
-        else:
-            pass
+        if lo or se:
+            if lo:
+                Ads = Ads.filter(location=lo).order_by("-date")
+            if se:
+                select=[]
+                for i in Ads:
+                    if se in i.title:
+                        select.append(i)
 
+                Ads= select
+            return render(request, 'home.html', {'obj': Ads, 'lo': lo,'se':se})
 
-    Ads=PostAd.objects.all().order_by("-date")
-
-    lo="Location"
-    return render(request, 'home.html',{'obj':Ads,'lo':lo})
+    return render(request, 'home.html',{'obj':Ads})
 
 
 def activation(request):

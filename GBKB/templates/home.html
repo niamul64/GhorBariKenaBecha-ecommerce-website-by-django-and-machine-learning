@@ -20,7 +20,10 @@
 <form  class="d-flex" action="{% url 'home' %}" method="GET">
 {% csrf_token %}
 <select name="location" id="location">
-  <option value="">{{lo}}</option>
+    {% if lo %}
+  <option value="{{lo}}">{{lo}}</option>
+    {% endif%}
+    <option value="">Location</option>
   <option value="Dhaka Cantonment">Dhaka Cantonment</option>
   <option value="Dhamrai">Dhamrai</option>
   <option value="Dhanmondi">Dhanmondi</option>
