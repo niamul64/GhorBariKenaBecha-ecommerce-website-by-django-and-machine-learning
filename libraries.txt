@@ -3,3 +3,4 @@ pip install pillow
 pip install django-crispy-forms
 pip install joblib
 pip install -U scikit-learn
+pip install numpy
