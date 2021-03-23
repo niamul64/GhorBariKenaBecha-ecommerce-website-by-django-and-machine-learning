@@ -71,14 +71,35 @@ def home(request):
         if details.activation!=True:
             return redirect('activation')
 
+    Ads = PostAd.objects.all().order_by("-date")
+    if request.method == 'GET':
+        se = request.GET.get('search')
+        lo= request.GET.get('location')
+        print (lo, se)
+        if lo or se:
+            if lo:
+                Ads = Ads.filter(location=lo).order_by("-date")
+            if se:
+                select=[]
+                for i in Ads:
+                    if se in i.title:
+                        select.append(i)
 
-    Ads=PostAd.objects.all().order_by("-date")
-
+                Ads= select
+            return render(request, 'home.html', {'obj': Ads, 'lo': lo,'se':se})
 
     return render(request, 'home.html',{'obj':Ads})
 
 
 def activation(request):
+    if request.user.is_authenticated:
+        details = get_object_or_404(ExtentionUser, userID=request.user)
+
+        if details.activation!=True:
+            return redirect('activation')
+    else:
+        return render(request, 'accounts/signin.html', {'error': "sign-in first"})
+
     m = ""
     if request.method == 'POST':
         mail = request.POST['email']

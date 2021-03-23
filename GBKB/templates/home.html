@@ -16,6 +16,39 @@
 
 {% block navright %}
 
+
+<form  class="d-flex" action="{% url 'home' %}" method="GET">
+{% csrf_token %}
+<select name="location" id="location">
+    {% if lo %}
+  <option value="{{lo}}">{{lo}}</option>
+    {% endif%}
+    <option value="">Location</option>
+  <option value="Dhaka Cantonment">Dhaka Cantonment</option>
+  <option value="Dhamrai">Dhamrai</option>
+  <option value="Dhanmondi">Dhanmondi</option>
+  <option value="Gulshan 1">Gulshan 1</option>
+  <option value="Gulshan 2">Gulshan 2</option>
+  <option value="Jatrabari">Jatrabari</option>
+  <option value="Keraniganj">Keraniganj</option>
+  <option value="Khilgaon">Khilgaon</option>
+  <option value="Khilkhet">Khilkhet</option>
+  <option value="Lalbag">Lalbag</option>
+  <option value="Mohammadpur">Mohammadpur</option>
+  <option value="Mirpur">Mirpur</option>
+  <option value="Motijheel">Motijheel</option>
+  <option value="Palton">Palton</option>
+  <option value="Ramna">Ramna</option>
+  <option value="Sabujbag">Sabujbag</option>
+  <option value="Uttara">Uttara</option>
+  <option value="Dhanmondi">Dhanmondi</option>
+  <option value="Boshundhora">Boshundhora</option>
+  <option value="Bonani">Bonani</option>
+  <option value="Mohakhali">Mohakhali</option>
+</select>
+        <input class="form-control me-2 mx-1 " name="search" type="search" placeholder="Search" aria-label="Search" value="{{se}}">
+        <button class="btn btn-outline-success" type="submit">Filter</button>
+</form>
 {% endblock%}
 
 {% block body1 %}
