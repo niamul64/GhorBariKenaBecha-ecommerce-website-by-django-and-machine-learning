@@ -1,1 +1,3 @@
 pip install Django-Verify-Email
+pip install pillow
+pip install django-crispy-forms

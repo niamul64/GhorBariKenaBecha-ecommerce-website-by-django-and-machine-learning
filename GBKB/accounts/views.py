@@ -92,6 +92,14 @@ def home(request):
 
 
 def activation(request):
+    if request.user.is_authenticated:
+        details = get_object_or_404(ExtentionUser, userID=request.user)
+
+        if details.activation!=True:
+            return redirect('activation')
+    else:
+        return render(request, 'accounts/signin.html', {'error': "sign-in first"})
+
     m = ""
     if request.method == 'POST':
         mail = request.POST['email']
