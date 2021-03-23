@@ -20,6 +20,7 @@ urlpatterns = [
     path('delete/myAccount/', views.myAccount, name='delete/myAccount/'),
     path('changeEmail',views.changeEmail, name='changeEmail'),
     path('changeNumber',views.changeNumber, name='changeNumber'),
+    path('prediction',views.prediction, name='prediction'),
     # path('myCollection', views.myCollection, name='myCollection'),
     # path('delete/myCollection/', views.myCollection, name='delete/myCollection'),
     # path('newsBee', views.newsBee, name='newsBee'),

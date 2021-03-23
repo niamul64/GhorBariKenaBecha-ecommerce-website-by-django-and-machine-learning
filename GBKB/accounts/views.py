@@ -11,7 +11,46 @@ from .forms import UserReg, ExtentUser, PostAdForm
 from django.core.mail import send_mail
 import random
 from django.conf import settings
+import joblib
 # Create your views here.
+
+def prediction(request):
+    
+    if request.user.is_authenticated:
+        details = get_object_or_404(ExtentionUser, userID=request.user)
+        if details.activation != True:
+            return redirect('activation')
+    else:
+        return redirect('signin')
+
+    if request.method == 'POST':
+        lis=[]
+
+        sq= request.POST['sq']
+        lis.append(sq)
+        wr=request.POST['wr']
+        lis.append(wr)
+        br = request.POST['br']
+        lis.append(br)
+        fl = request.POST['fl']
+        lis.append(fl)
+        li = request.POST['li']
+        lis.append(li)
+        rs = request.POST['rs']
+        lis.append(rs)
+        ai = request.POST['ai']
+        lis.append(ai)
+        print(lis)
+        cls= joblib.load('Finalized_model.sav')
+        ans=int(cls.predict([lis]))
+
+        print(ans)
+
+
+        return render(request, 'prediction/predict.html',{'ans':ans,'ai':ai,'sq':sq,'wr':wr,'br':br,'fl':fl,'li':li,'rs':rs})
+    return render(request, 'prediction/predict.html')
+
+
 
 def signin(request):
     if request.user.is_authenticated:
@@ -137,6 +176,15 @@ def activation(request):
     return render(request, 'accounts/activation.html', {'message': m})
 
 def confirmActivation(request):
+    if request.user.is_authenticated:
+        details = get_object_or_404(ExtentionUser, userID=request.user)
+
+        if details.activation!=True:
+            return redirect('activation')
+    else:
+        return render(request, 'accounts/signin.html', {'error': "sign-in first"})
+
+
     details = get_object_or_404(ExtentionUser, userID=request.user)
 
     if request.method == 'POST':
@@ -292,3 +340,5 @@ def changeNumber(request):
                           {'obj': Ads, "ex": details, "message2": "New Phone Number is saved"})
     Ads=PostAd.objects.all().filter(userID=request.user).order_by("-date")
     return render(request, 'accounts/myAccount.html',{'obj':Ads, "ex":details, "error2":"Enter Mobile Number Correctly"})
+
+

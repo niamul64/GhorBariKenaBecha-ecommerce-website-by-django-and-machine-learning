@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block head %}
+
+
+
+{% endblock%}
+
+
+
+
+{% block body1 %}
+<div class="col-12	col-sm-12	col-md-8 col-lg-8 col-xl-8 offset-lg-2">
+<div class="card boxShadow border-4 justify-content-center"    >
+<form  method="post"  action="{% url 'prediction' %}">
+    {% csrf_token %}
+{% if error %}
+<p class="text-danger"> {{error}} </p>
+{% endif %}
+    {% if ans %}
+    <p class="text-primary">Based on your input,<br> The price of an apartment is around:<br> <span class="text-success">{{ans}} Tk</span> </p>
+{% endif %}
+        <p class="mt-3">Area:</p>
+
+    <select name="ai" id="location" required>
+
+    <option value="">Location</option>
+
+  <option value=1>Mirpur</option>
+
+  <option value=2>Uttara</option>
+
+  <option value=3>Bonani</option>
+
+    </select>
+
+
+        <p class="mt-3">Square feet:</p>
+        <input class="mx-5"  type="text" name="sq"  required><br>
+        <p class="mt-3">WashRoom:</p>
+        <input class="mx-5"  type="text" name="wr" required><br>
+        <p class="mt-3">BedRoom:</p>
+        <input class="mx-5"  type="text" name="br"required><br>
+        <p class="mt-3">Floor:</p>
+        <input class="mx-5"  type="text" name="fl"  required><br>
+        <p class="mt-3">Lift:</p>
+        <input class="mx-5"  type="text" name="li"  required><br>
+        <p class="mt-3">RoadSize:</p>
+        <input class="mx-5"  type="text" name="rs"  required><br>
+
+
+        <input class="mx-5 mt-3"  type="submit" value="Predit">
+
+
+</form>
+</div>
+</div>
+
+{% endblock%}
+
