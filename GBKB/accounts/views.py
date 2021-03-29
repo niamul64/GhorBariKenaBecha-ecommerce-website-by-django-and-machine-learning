@@ -12,6 +12,7 @@ from django.core.mail import send_mail
 import random
 from django.conf import settings
 import joblib
+from predictor.models import Review
 # Create your views here.
 
 def prediction(request):
@@ -46,7 +47,7 @@ def prediction(request):
 
         area=['Mirpur','Uttora','Bonani','Dhanmondi','Basundhara','Gulshan']
         lift=['No lift','Lift service available']
-
+        Review(userID=request.user, sqft=lis[0], washRoom=lis[1], bedRoom=lis[2], floor=lis[3],lift=lis[4],roadSize=lis[5],location=lis[6], price=ans).save()
         return render(request, 'prediction/predict.html',{'ans':ans,'ai':ai,'area':area[int(ai)-1],'sq':sq,'wr':wr,'br':br,'fl':fl,'li':li,'Lift':lift[int(li)],'rs':rs})
     ai,sq,wr,br,fl,li,rs=None,None,None,None,None,None,None
     return render(request, 'prediction/predict.html',{'ai':ai,'sq':sq,'wr':wr,'br':br,'fl':fl,'li':li,'rs':rs})
