@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import dataSet , review
+from .models import DataSet , Review
 
-admin.site.register(review)
-admin.site.register(dataSet)
+admin.site.register(Review)
+admin.site.register(DataSet)
