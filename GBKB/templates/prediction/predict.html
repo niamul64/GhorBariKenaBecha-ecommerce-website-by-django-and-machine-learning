@@ -22,36 +22,91 @@
     {% if ans %}
     <p class="text-primary">Based on your input,<br> The price of an apartment is around:<br> <span class="text-success">{{ans}} Tk</span> </p>
 {% endif %}
+
+     <p class="text-info">Provide proper inputs to predict the value<br>of an apartment which you may be looking for:</p>
+
         <p class="mt-3">Area:</p>
 
-    <select name="ai" id="location" required>
-
-    <option value="">Location</option>
+    <select class="mx-5"  name="ai" id="location" required >
+    {% if ai %}
+        <option value="{{ai}}">{{area}}</option>
+    {% endif %}
+  <option value="">Location</option>
 
   <option value=1>Mirpur</option>
 
-  <option value=2>Uttara</option>
+  <option value=2>Uttora</option>
 
   <option value=3>Bonani</option>
+<option value=4>Dhanmondi</option>
+
+  <option value=5>Basundhara</option>
+
+  <option value=6>Gulshan</option>
 
     </select>
 
 
         <p class="mt-3">Square feet:</p>
-        <input class="mx-5"  type="text" name="sq"  required><br>
+        {% if sq %}
+    <input class="mx-5"  type="number" name="sq" value="{{sq}}"  required><br>
+    {% else %}
+        <input class="mx-5"  type="number" name="sq"  required><br>
+       {% endif %}
+
+
+
         <p class="mt-3">WashRoom:</p>
-        <input class="mx-5"  type="text" name="wr" required><br>
+
+        {% if wr %}
+    <input class="mx-5"  type="number" name="wr"  value="{{wr}}" required><br>
+    {% else %}
+        <input class="mx-5"  type="number" name="wr" required><br>
+       {% endif %}
+
+
         <p class="mt-3">BedRoom:</p>
-        <input class="mx-5"  type="text" name="br"required><br>
+       {% if br %}
+
+     <input class="mx-5"  type="number" name="br" value="{{br}}"required><br>
+    {% else %}
+        <input class="mx-5"  type="number" name="br" required><br>
+       {% endif %}
+
+
+
         <p class="mt-3">Floor:</p>
-        <input class="mx-5"  type="text" name="fl"  required><br>
+      {% if fl %}
+
+     <input class="mx-5"  type="number" name="fl" value="{{fl}}" required><br>
+    {% else %}
+   <input class="mx-5"  type="number" name="fl"  required><br>
+       {% endif %}
+
+
+
         <p class="mt-3">Lift:</p>
-        <input class="mx-5"  type="text" name="li"  required><br>
+  <select class="mx-5"  name="li" id="li" required>
+    {% if li %}
+        <option value="{{li}}">{{Lift}}</option>
+    {% endif %}
+  <option value="">Lift</option>
+
+  <option value=0>No lift service</option>
+
+  <option value=1>Lift service available</option>
+
+  </select><br>
+
         <p class="mt-3">RoadSize:</p>
-        <input class="mx-5"  type="text" name="rs"  required><br>
+      {% if rs %}
+         <input class="mx-5"  type="number" name="rs" value="{{rs}}"  required> <br>
+    {% else %}
+        <input class="mx-5"  type="number" name="rs"  required><br>
+       {% endif %}
 
 
-        <input class="mx-5 mt-3"  type="submit" value="Predit">
+        <input class="mx-5 mt-3 my-3 btn btn-primary"  type="submit" value="Predit">
 
 
 </form>

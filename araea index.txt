@@ -3,6 +3,6 @@
         (2, 'Uttora'),
         (3, 'Bonani'),
         (4, 'Dhanmondi'),
-        (5, 'Boshundhora'),
-        (6, 'Gulshan 1'),
-        (7, 'Gulshan 2'),
+        (5, 'Basundhara'),
+        (6, 'Gulshan'),
+     

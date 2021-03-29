@@ -27,28 +27,29 @@ def prediction(request):
         lis=[]
 
         sq= request.POST['sq']
-        lis.append(sq)
+        lis.append(int(sq))
         wr=request.POST['wr']
-        lis.append(wr)
+        lis.append(int(wr))
         br = request.POST['br']
-        lis.append(br)
+        lis.append(int(br))
         fl = request.POST['fl']
-        lis.append(fl)
+        lis.append(int(fl))
         li = request.POST['li']
-        lis.append(li)
+        lis.append(int(li))
         rs = request.POST['rs']
-        lis.append(rs)
+        lis.append(int(rs))
         ai = request.POST['ai']
-        lis.append(ai)
-        print(lis)
+        lis.append(int(ai))
+
         cls= joblib.load('Finalized_model.sav')
         ans=int(cls.predict([lis]))
 
-        print(ans)
+        area=['Mirpur','Uttora','Bonani','Dhanmondi','Basundhara','Gulshan']
+        lift=['No lift','Lift service available']
 
-
-        return render(request, 'prediction/predict.html',{'ans':ans,'ai':ai,'sq':sq,'wr':wr,'br':br,'fl':fl,'li':li,'rs':rs})
-    return render(request, 'prediction/predict.html')
+        return render(request, 'prediction/predict.html',{'ans':ans,'ai':ai,'area':area[int(ai)-1],'sq':sq,'wr':wr,'br':br,'fl':fl,'li':li,'Lift':lift[int(li)],'rs':rs})
+    ai,sq,wr,br,fl,li,rs=None,None,None,None,None,None,None
+    return render(request, 'prediction/predict.html',{'ai':ai,'sq':sq,'wr':wr,'br':br,'fl':fl,'li':li,'rs':rs})
 
 
 
