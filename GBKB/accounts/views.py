@@ -394,3 +394,8 @@ def reviewSub(request,pId):
     help = Review.objects.all()
     Message = "You submission noted, you can help us more."
     return render(request, 'prediction/review.html', {"help":help,'message':Message})
+
+
+def about(request):
+    return render(request, 'about/about.html',)
+
