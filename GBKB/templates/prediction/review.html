@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="static/css js/varifivcation.css">
+<link rel="stylesheet" type="text/css" href="static/css js/card_box.css">
+<link rel="stylesheet" type="text/css" href="/static/css js/media_tag.css">
+{% endblock%}
+
+
+{% block navleft %}
+
+{% endblock%}
+
+
+{% block navright %}
+
+{% endblock%}
+
+{% block body1 %}
+<!--help-->
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <p>{{message}}</p>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<!--help-->
+
+
+<div class="col-12	col-sm-12	col-md-8 col-lg-8 col-xl-8 offset-lg-2">
+
+
+<div class="boxVari  border border-dark">
+
+{% for i in help%}  <!-- ......................   -->
+
+
+<div class="card mb-3 boxShadow border-3 "   >
+    <div class=" bg-secondary text-white">
+
+
+
+    <form  method="post" action="{% url 'reviewSub' i.id %}">
+        {% csrf_token %}
+        <input class="m-2 float-left p-2"  type="number" name="actualPrice" placeholder="Enter Actual Price" required><br>
+        <input class="mx-2  boxShadow btn btn-primary"  type="submit" value="Submit">
+    </form>
+
+
+        </a>
+    </div>
+
+
+
+
+  <div class="card-body">
+
+      <div class="">
+      <p class="card-text"> Predicted Price: {{i.price}}</p>
+
+          {% if i.location == 1 %}
+      <p class="card-text"> Location: Mirpur</p>
+        {% endif %}
+               {% if i.location == 2 %}
+      <p class="card-text"> Location: Uttora</p>
+        {% endif %}
+         {% if i.location == 3 %}
+      <p class="card-text"> Location: Bonani</p>
+        {% endif %}
+
+         {% if i.location == 4 %}
+      <p class="card-text"> Location: Dhanmondi</p>
+        {% endif %}
+             {% if i.location == 5 %}
+      <p class="card-text"> Location: Bosundhara</p>
+        {% endif %}
+         {% if i.location == 6 %}
+      <p class="card-text"> Location: Gulshan</p>
+        {% endif %}
+
+
+      <p class="card-text"> Sqft: {{i.sqft}}</p>
+      <p class="card-text">Number of Bed Roms: {{i.bedRoom}}</p>
+      <p class="card-text ">Number of Wash Roms: {{i.washRoom}}</p>
+          <p class="card-text ">Number of Wash Roms: {{i.roadSize}}</p>
+
+        {% if i.lift == 0 %}
+      <p class="card-text ">Number of Wash Roms: No lift service</p>
+          {% endif %}
+   {% if i.lift == 1 %}
+      <p class="card-text ">Number of Wash Roms: Lift service available</p>
+          {% endif %}
+
+
+
+    <p class="card-text ">Number of Wash Roms: {{i.floor}}</p>
+
+
+      </div>
+
+
+  </div>
+</div>
+{% endfor%}
+
+
+
+</div>
+</div>
+
+{% endblock%}

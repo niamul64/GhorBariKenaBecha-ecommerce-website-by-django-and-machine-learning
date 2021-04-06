@@ -21,7 +21,9 @@ urlpatterns = [
     path('changeEmail',views.changeEmail, name='changeEmail'),
     path('changeNumber',views.changeNumber, name='changeNumber'),
     path('prediction',views.prediction, name='prediction'),
-    # path('myCollection', views.myCollection, name='myCollection'),
+
+    path('reviewFromUser', views.reviewFromUser, name='reviewFromUser'),
+    path('reviewSub/<int:pId>', views.reviewSub, name='reviewSub'),
     # path('delete/myCollection/', views.myCollection, name='delete/myCollection'),
     # path('newsBee', views.newsBee, name='newsBee'),
     # path('delete/<int:pk>',views.delete.as_view(), name='delete'),

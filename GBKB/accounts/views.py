@@ -253,11 +253,14 @@ def myAccount(request):
             return redirect('activation')
     else:
         return redirect('signin')
+    help=Review.objects.all()
 
 
     Ads=PostAd.objects.all().filter(userID=request.user).order_by("-date")
 
 
+    if help:
+        return render(request, 'accounts/myAccount.html',{'obj':Ads, "ex":details,'help':True })
     return render(request, 'accounts/myAccount.html',{'obj':Ads, "ex":details})
 
 
@@ -341,3 +344,27 @@ def changeNumber(request):
     return render(request, 'accounts/myAccount.html',{'obj':Ads, "ex":details, "error2":"Enter Mobile Number Correctly"})
 
 
+def reviewFromUser(request):
+    if request.user.is_authenticated:
+        details = get_object_or_404(ExtentionUser, userID=request.user)
+        if details.activation!=True:
+            return redirect('activation')
+    else:
+        return redirect('signin')
+    help=Review.objects.all()
+    Message="If you know the actual price over any of the predicted price then please enter the price and submit"
+
+    return render(request, 'prediction/review.html', {"help":help,'message':Message})
+def reviewSub(request,pId):
+    if request.user.is_authenticated:
+        details = get_object_or_404(ExtentionUser, userID=request.user)
+        if details.activation!=True:
+            return redirect('activation')
+    else:
+        return redirect('signin')
+
+    #get_object_or_404(Review, id=pId).delete()
+    print(pId)
+    help = Review.objects.all()
+    Message = "You submission noted, you can help us more."
+    return render(request, 'prediction/review.html', {"help":help,'message':Message})
