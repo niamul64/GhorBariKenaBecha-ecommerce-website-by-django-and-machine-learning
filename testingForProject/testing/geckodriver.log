@@ -96,3 +96,403 @@ JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.m
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1616543887302	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofile01LWd3"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616543890122	Marionette	INFO	Listening on port 52904
+1616543890443	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616543934473	Marionette	INFO	Stopped listening on port 52904
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616543939078	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofilejzCAHP"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616543941750	Marionette	INFO	Listening on port 53134
+1616543942204	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://niamul26.pythonanywhere.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://niamul26.pythonanywhere.com"
+1616544034494	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofileh4boDn"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616544037063	Marionette	INFO	Listening on port 53485
+1616544037129	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616544146626	Marionette	INFO	Stopped listening on port 53485
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616544152177	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofile0GQi1i"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616544154690	Marionette	INFO	Listening on port 54259
+1616544154810	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616544176799	Marionette	INFO	Stopped listening on port 54259
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616544872724	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofileY4kqiE"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616544875455	Marionette	INFO	Listening on port 58407
+1616544875856	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616544903181	Marionette	INFO	Stopped listening on port 58407
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616545018273	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofileXTM205"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616545020875	Marionette	INFO	Listening on port 59177
+1616545020901	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616545090114	Marionette	INFO	Stopped listening on port 59177
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616545145293	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofileKoqGlw"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616545147789	Marionette	INFO	Listening on port 59744
+1616545147932	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616545305059	Marionette	INFO	Stopped listening on port 59744
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616545356185	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofile8LvYKK"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616545358735	Marionette	INFO	Listening on port 60455
+1616545358814	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616545377374	Marionette	INFO	Stopped listening on port 60455
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616546038893	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofileD8fT51"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616546041511	Marionette	INFO	Listening on port 62786
+1616546041528	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://niamul26.pythonanywhere.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 125: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://niamul26.pythonanywhere.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 125: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://niamul26.pythonanywhere.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 125: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://niamul26.pythonanywhere.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 125: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://niamul26.pythonanywhere.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 125: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://niamul26.pythonanywhere.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 125: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://niamul26.pythonanywhere.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 125: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://niamul26.pythonanywhere.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 125: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://niamul26.pythonanywhere.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 125: TypeError: gRecipeManager is null
+1616547973293	Marionette	INFO	Stopped listening on port 62786
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616546519303	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofiletSCdKe"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616546521857	Marionette	INFO	Listening on port 65349
+1616546521954	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616546531395	Marionette	INFO	Stopped listening on port 65349
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616547704012	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofilexstP3E"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616547706558	Marionette	INFO	Listening on port 53625
+1616547706642	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616547899609	Marionette	INFO	Stopped listening on port 53625
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+rs\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofile3zpzv8"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616547846265	Marionette	INFO	Listening on port 54537
+1616547846693	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616547876741	Marionette	INFO	Stopped listening on port 54537
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616558603428	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofileR0tezB"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616558606616	Marionette	INFO	Listening on port 59805
+1616558607059	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616558636785	Marionette	INFO	Stopped listening on port 59805
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616558640607	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofiley4Pe3o"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616558643282	Marionette	INFO	Listening on port 60041
+1616558643734	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616558669296	Marionette	INFO	Stopped listening on port 60041
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616558673164	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofileEhYy42"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616558676085	Marionette	INFO	Listening on port 60184
+1616558676292	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616558706263	Marionette	INFO	Stopped listening on port 60184
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616558709919	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofile6e40of"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616558712754	Marionette	INFO	Listening on port 60440
+1616558713046	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616558726630	Marionette	INFO	Stopped listening on port 60440
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616558730456	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofilehA36Hu"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616558732964	Marionette	INFO	Listening on port 60628
+1616558733083	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616558766346	Marionette	INFO	Stopped listening on port 60628
+[Parent 7528, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616558971595	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofile5y8y0e"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616558974482	Marionette	INFO	Listening on port 62991
+1616558974724	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616559002218	Marionette	INFO	Stopped listening on port 62991
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616559005887	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofileCb8RAa"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616559008634	Marionette	INFO	Listening on port 63351
+1616559009019	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616559525349	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616559580694	Marionette	INFO	Stopped listening on port 63351
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616998383936	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofile1iFwr9"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616998392807	Marionette	INFO	Listening on port 49717
+1616998392915	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1616998941085	Marionette	INFO	Stopped listening on port 49717
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616998977724	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofilep16md4"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616998980174	Marionette	INFO	Listening on port 56095
+1616998980349	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616999004704	Marionette	INFO	Stopped listening on port 56095
+1616999008375	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofile6Pv38z"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616999010856	Marionette	INFO	Listening on port 56358
+1616999011003	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616999032403	Marionette	INFO	Stopped listening on port 56358
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616999036065	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofilewYdFK1"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616999038459	Marionette	INFO	Listening on port 56667
+1616999038689	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616999064927	Marionette	INFO	Stopped listening on port 56667
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616999068648	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofilee8lmid"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616999071036	Marionette	INFO	Listening on port 57063
+1616999071274	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616999084161	Marionette	INFO	Stopped listening on port 57063
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616999087809	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofile9JaqfO"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616999090271	Marionette	INFO	Listening on port 57283
+1616999090443	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616999114831	Marionette	INFO	Stopped listening on port 57283
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616999118523	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\USER1~1\\AppData\\Local\\Temp\\rust_mozprofileyiBJLj"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616999121712	Marionette	INFO	Listening on port 57594
+1616999122160	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+[Parent 13672, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1616999345586	Marionette	INFO	Stopped listening on port 57594
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+rror: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616999152586	Marionette	INFO	Listening on port 57855
+1616999152671	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+JavaScript error: https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js, line 6: TypeError: t is undefined
+1616999177524	Marionette	INFO	Stopped listening on port 57855
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

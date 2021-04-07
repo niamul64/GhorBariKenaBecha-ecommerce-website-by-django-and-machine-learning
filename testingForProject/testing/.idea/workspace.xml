@@ -8,10 +8,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" userTempatePath="" />
+  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" userTempatePath="jpg" />
   <component name="ProjectId" id="1pDejDB8TYYSsQFnQtw73MdVAmV" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../GhorBariKenaBecha-ecommerce-website-by-django-and-machine-learning" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../GhorBariKenaBecha-ecommerce-website-by-django-and-machine-learning/GBKB" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

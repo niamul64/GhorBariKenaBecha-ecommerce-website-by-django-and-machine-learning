@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ads | GBKB</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
+   <link rel="stylesheet" href="/static/fonts/icomoon/style.css">
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/magnific-popup.css">
+  <link rel="stylesheet" href="/static/css/jquery-ui.css">
+  <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="/static/css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="/static/fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="/static/css/aos.css">
+  <link rel="stylesheet" href="/static/css/rangeslider.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+  <div class="site-wrap">
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    <header class="site-navbar container py-0 bg-white" role="banner">
+
+      <!------------------------------------------------------------- Navbar Section Start---------------------------------------->
+
+      <div class="row align-items-center">
+      <a href="{% url 'home' %}">
+		<div class="col-6 col-xl-2">
+          <h1 class="mb-0 site-logo"><a href="{% url 'home' %}" class="text-black mb-0">GB<span
+                class="text-primary">KB</span> </a></h1>
+        </div></a>
+        <div class="col-12 col-md-10 d-none d-xl-block">
+          <nav class="site-navigation position-relative text-right" role="navigation">
+            <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+           <li><a href="{% url 'home' %}">Home</a></li>
+
+              <li  class="active"><a href="{% url 'about' %}">About</a></li>
+			  {% if request.user.is_authenticated %}
+				<li><a href="{% url 'myAccount' %}">My Account</a></li>
+              <li><a href="{% url 'prediction' %}">Predict</a></li>
+
+			  	  <li><a href="{% url 'postAd' %}" class="cta"><span class="bg-primary text-white rounded">+ Post an Ad</span></a></li>
+
+			  {% else %}
+              <li class="ml-xl-3 login"><a href="{% url 'signin' %}"><span class="border-left pl-xl-4"></span>Log In</a></li>
+              <li><a href="{% url 'signup' %}">Register</a></li>
+
+			   {% endif %} </ul>
+          </nav>
+        </div>
+        <div class="d-inline-block d-xl-none ml-auto py-3 col-6 text-right" style="position: relative; top: 3px;">
+          <a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a>
+        </div>
+      </div>
+    </header>
+
+<!------------------------------------------------------------- Navbar Section End---------------------------------------->
+
+
+<!------------------------------------------------------------- Body Section Start---------------------------------------->
+
+    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url('/static/images/hero_2.jpg');"
+
+      data-aos="fade" data-stellar-background-ratio="0.5">
+    </div>
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row">
+
+
+
+
+
+
+
+
+{% for i in obj%}
+              <div class="col-lg-6" onclick="window.location='{% url 'detail' i.id %}'; "  style=" cursor: pointer;">
+                <div class="d-block d-md-flex listing vertical">
+                  <img src="{{i.img1.url}}" class="img d-block" style="background-image: url('i.img1');">
+                  <div class="lh-content">
+                    <span class="category">{{i.location}}</span>
+
+                    <h3><a>{{i.title}}</a></h3>
+                    <a><b>Price:</b>{{i.price}}</a>
+                    <a><b>Sqft:</b>{{i.sqft}}</a>
+                    <a><b>Description:</b>{{i.des}}</a>
+                  </div>
+                </div>
+              </div>
+{% endfor%}
+
+
+
+            </div>
+
+
+
+            <div class="col-12 mt-5 text-center">
+
+            </div>
+          </div>
+
+
+          <!------------------------------------------------------------- Post Section End ---------------------------------------->
+
+    <!------------------------------------------------------------- Side Filter Section Start ---------------------------------------->
+
+          <div class="col-lg-3 ml-auto">
+            <div class="mb-5">
+              <h3 class="h5 text-black mb-3">Filters</h3>
+
+
+
+<form   action="{% url 'home' %}" method="GET">
+  {% csrf_token %}
+                <div class="form-group">
+
+                   <input class="form-control" name="search" type="search" placeholder="Search" aria-label="Search" value="{{se}}">
+                </div>
+                <div class="form-group">
+                  <div class="select-wrap">
+                    <span class="icon"><span class="icon-keyboard_arrow_down"></span></span>
+
+                    <select class="form-control" name="location" id="location">
+    {% if lo %}
+  <option value="{{lo}}">{{lo}}</option>
+    {% endif%}
+    <option value="">Location</option>
+  <option value="Dhaka Cantonment">Dhaka Cantonment</option>
+  <option value="Dhamrai">Dhamrai</option>
+  <option value="Dhanmondi">Dhanmondi</option>
+  <option value="Gulshan 1">Gulshan 1</option>
+  <option value="Gulshan 2">Gulshan 2</option>
+  <option value="Jatrabari">Jatrabari</option>
+  <option value="Keraniganj">Keraniganj</option>
+  <option value="Khilgaon">Khilgaon</option>
+  <option value="Khilkhet">Khilkhet</option>
+  <option value="Lalbag">Lalbag</option>
+  <option value="Mohammadpur">Mohammadpur</option>
+  <option value="Mirpur">Mirpur</option>
+  <option value="Motijheel">Motijheel</option>
+  <option value="Palton">Palton</option>
+  <option value="Ramna">Ramna</option>
+  <option value="Sabujbag">Sabujbag</option>
+  <option value="Uttara">Uttara</option>
+  <option value="Dhanmondi">Dhanmondi</option>
+  <option value="Boshundhora">Boshundhora</option>
+  <option value="Bonani">Bonani</option>
+  <option value="Mohakhali">Mohakhali</option>
+</select>
+                    <button class="btn btn-outline-success" type="submit">Filter</button>
+                  </div>
+                </div>
+                <div class="form-group">
+
+                  <div class="wrap-icon">
+
+
+                  </div>
+                </div>
+              </form>
+
+            </div>
+            <div class="mb-5">
+              <form action="#" method="post">
+
+
+              </form>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!------------------------------------------------------------- Side Filter Section End ---------------------------------------->
+
+    <!------------------------------------------------------------- Feature Ad Section Start ---------------------------------------->
+<!--    <div class="site-section bg-light">-->
+<!--      <div class="container">-->
+<!--        <div class="row">-->
+<!--          <div class="col-12">-->
+<!--            <h2 class="h5 mb-4 text-black">Featured Ads</h2>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--          <div class="col-12  block-13">-->
+<!--            <div class="owl-carousel nonloop-block-13">-->
+<!--              <div class="d-block d-md-flex listing vertical">-->
+<!--                <a href="#" class="img d-block"-->
+<!--                  style="background-image: url('images/img_1.jpg')"></a>-->
+<!--                <div class="lh-content">-->
+<!--                  <span class="category">Category 1</span>-->
+<!--                  <a href="#" class="bookmark"><span class="icon-heart"></span></a>-->
+<!--                  <h3><a href="#">House with Swimming Pool</a></h3>-->
+<!--                  <a><b>Price:</b>20,000</a>-->
+<!--                  <p class="mb-0">-->
+<!--                    <span class="icon-star text-warning"></span>-->
+<!--                    <span class="icon-star text-warning"></span>-->
+<!--                    <span class="icon-star text-warning"></span>-->
+<!--                    <span class="icon-star text-warning"></span>-->
+<!--                    <span class="icon-star text-secondary"></span>-->
+<!--                    <span class="review">(3 Reviews)</span>-->
+<!--                  </p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="d-block d-md-flex listing vertical">-->
+<!--                <a href="#" class="img d-block"-->
+<!--                  style="background-image: url('images/img_2.jpg')"></a>-->
+<!--                  <div class="lh-content">-->
+<!--                    <span class="category">Category 1</span>-->
+<!--                    <a href="#" class="bookmark"><span class="icon-heart"></span></a>-->
+<!--                    <h3><a href="#">House with Swimming Pool</a></h3>-->
+<!--                    <a><b>Price:</b>20,000</a>-->
+<!--                    <p class="mb-0">-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-secondary"></span>-->
+<!--                      <span class="review">(3 Reviews)</span>-->
+<!--                    </p>-->
+<!--                  </div>-->
+<!--              </div>-->
+<!--              <div class="d-block d-md-flex listing vertical">-->
+<!--                <a href="#" class="img d-block"-->
+<!--                  style="background-image: url('images/img_3.jpg')"></a>-->
+<!--                  <div class="lh-content">-->
+<!--                    <span class="category">Category 1</span>-->
+<!--                    <a href="#" class="bookmark"><span class="icon-heart"></span></a>-->
+<!--                    <h3><a href="#">House with Swimming Pool</a></h3>-->
+<!--                    <a><b>Price:</b>20,000</a>-->
+<!--                    <p class="mb-0">-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-secondary"></span>-->
+<!--                      <span class="review">(3 Reviews)</span>-->
+<!--                    </p>-->
+<!--                  </div>-->
+<!--              </div>-->
+<!--              <div class="d-block d-md-flex listing vertical">-->
+<!--                <a href="#" class="img d-block"-->
+<!--                  style="background-image: url('images/img_4.jpg')"></a>-->
+<!--                  <div class="lh-content">-->
+<!--                    <span class="category">Category 1</span>-->
+<!--                    <a href="#" class="bookmark"><span class="icon-heart"></span></a>-->
+<!--                    <h3><a href="#">House with Swimming Pool</a></h3>-->
+<!--                    <a><b>Price:</b>20,000</a>-->
+<!--                    <p class="mb-0">-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-secondary"></span>-->
+<!--                      <span class="review">(3 Reviews)</span>-->
+<!--                    </p>-->
+<!--                  </div>-->
+<!--              </div>-->
+<!--              <div class="d-block d-md-flex listing vertical">-->
+<!--                <a href="#" class="img d-block"-->
+<!--                  style="background-image: url('images/img_1.jpg')"></a>-->
+<!--                  <div class="lh-content">-->
+<!--                    <span class="category">Category 1</span>-->
+<!--                    <a href="#" class="bookmark"><span class="icon-heart"></span></a>-->
+<!--                    <h3><a href="#">House with Swimming Pool</a></h3>-->
+<!--                    <a><b>Price:</b>20,000</a>-->
+<!--                    <p class="mb-0">-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-secondary"></span>-->
+<!--                      <span class="review">(3 Reviews)</span>-->
+<!--                    </p>-->
+<!--                  </div>-->
+<!--              </div>-->
+<!--              <div class="d-block d-md-flex listing vertical">-->
+<!--                <a href="#" class="img d-block"-->
+<!--                  style="background-image: url('images/img_2.jpg')"></a>-->
+<!--                  <div class="lh-content">-->
+<!--                    <span class="category">Category 1</span>-->
+<!--                    <a href="#" class="bookmark"><span class="icon-heart"></span></a>-->
+<!--                    <h3><a href="#">House with Swimming Pool</a></h3>-->
+<!--                    <a><b>Price:</b>20,000</a>-->
+<!--                    <p class="mb-0">-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-secondary"></span>-->
+<!--                      <span class="review">(3 Reviews)</span>-->
+<!--                    </p>-->
+<!--                  </div>-->
+<!--              </div>-->
+<!--              <div class="d-block d-md-flex listing vertical">-->
+<!--                <a href="#" class="img d-block"-->
+<!--                  style="background-image: url('images/img_3.jpg')"></a>-->
+<!--                  <div class="lh-content">-->
+<!--                    <span class="category">Category 1</span>-->
+<!--                    <a href="#" class="bookmark"><span class="icon-heart"></span></a>-->
+<!--                    <h3><a href="#">House with Swimming Pool</a></h3>-->
+<!--                    <a><b>Price:</b>20,000</a>-->
+<!--                    <p class="mb-0">-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-secondary"></span>-->
+<!--                      <span class="review">(3 Reviews)</span>-->
+<!--                    </p>-->
+<!--                  </div>-->
+<!--              </div>-->
+<!--              <div class="d-block d-md-flex listing vertical">-->
+<!--                <a href="#" class="img d-block"-->
+<!--                  style="background-image: url('images/img_4.jpg')"></a>-->
+<!--                  <div class="lh-content">-->
+<!--                    <span class="category">Category 1</span>-->
+<!--                    <a href="#" class="bookmark"><span class="icon-heart"></span></a>-->
+<!--                    <h3><a href="#">House with Swimming Pool</a></h3>-->
+<!--                    <a><b>Price:</b>20,000</a>-->
+<!--                    <p class="mb-0">-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-warning"></span>-->
+<!--                      <span class="icon-star text-secondary"></span>-->
+<!--                      <span class="review">(3 Reviews)</span>-->
+<!--                    </p>-->
+<!--                  </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <!------------------------------------------------------------- Feature Section End ---------------------------------------->
+
+<!--    <div class="newsletter bg-primary py-5">-->
+<!--      <div class="container">-->
+<!--        <div class="row align-items-center">-->
+<!--          <div class="col-md-6">-->
+<!--            <h2>Newsletter</h2>-->
+<!--            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>-->
+<!--          </div>-->
+<!--          <div class="col-md-6">-->
+<!--            <form class="d-flex">-->
+<!--              <input type="text" class="form-control" placeholder="Email">-->
+<!--              <input type="submit" value="Subscribe" class="btn btn-white">-->
+<!--            </form>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <!------------------------------------------------------------- Footer Section Start ---------------------------------------->
+
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-6">
+                <h2 class="footer-heading mb-4">Our Mission</h2>
+                <p style="text-align: justify;">Build a dedicated e-commerce website to buy or sell property, apartment, and flat; inside Dhaka city </p>
+              </div>
+
+              <div class="col-md-3">
+                <h2 class="footer-heading mb-4">Contact</h2>
+                <ul class="list-unstyled">
+                  <p><b>Phone: </b> +8801704159550 </p>
+                  <p><b>Email: </b> niamulhassan64@gmail.com </p>
+                  <div class="input-group-append">
+
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+              <p>
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> All rights reserved | GBKB
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <!------------------------------------------------------------- Footer Section End ---------------------------------------->
+
+  </div>
+ <script src="/static/js/jquery-3.3.1.min.js"></script>
+  <script src="/static/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="/static/js/jquery-ui.js"></script>
+  <script src="/static/js/popper.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/owl.carousel.min.js"></script>
+  <script src="/static/js/jquery.stellar.min.js"></script>
+  <script src="/static/js/jquery.countdown.min.js"></script>
+  <script src="/static/js/jquery.magnific-popup.min.js"></script>
+  <script src="/static/js/bootstrap-datepicker.min.js"></script>
+  <script src="/static/js/aos.js"></script>
+  <script src="/static/js/rangeslider.min.js"></script>
+  <script src="/static/js/main.js"></script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-23581568-13');
+  </script>
+  <script defer src="../../../static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"si":10,"rayId":"62d678d39a32f454","version":"2021.2.0"}'></script>
+</body>
+</html>
+
+
+
+<!--------- University of Asia Pacific 
+  Software Engineering Project
+  -------------->

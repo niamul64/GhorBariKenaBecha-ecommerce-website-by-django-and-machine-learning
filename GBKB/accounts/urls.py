@@ -21,7 +21,6 @@ urlpatterns = [
     path('changeEmail',views.changeEmail, name='changeEmail'),
     path('changeNumber',views.changeNumber, name='changeNumber'),
     path('prediction',views.prediction, name='prediction'),
-
     path('reviewFromUser', views.reviewFromUser, name='reviewFromUser'),
     path('reviewSub/<int:pId>', views.reviewSub, name='reviewSub'),
     path('about', views.about, name='about'),

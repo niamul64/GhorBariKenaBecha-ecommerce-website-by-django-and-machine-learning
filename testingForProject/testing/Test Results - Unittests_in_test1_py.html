@@ -572,9 +572,9 @@ jQuery.cookie = function(name, value, options) {
     <body>
         <div id="container">
             <div id="header">
-                <div class="time" xmlns="">22.79 s</div>
+                <div class="time" xmlns="">3 m 23 s</div>
                 <h1>
-                    Unittests in test1.py: <strong><span class="total" xmlns="http://www.w3.org/1999/xhtml">1 total, </span><span class="passed">1 passed</span></strong>
+                    Unittests in test1.py: <strong><span class="total" xmlns="http://www.w3.org/1999/xhtml">7 total, </span><span class="failed">1 failed, </span><span class="passed">6 passed</span></strong>
                 </h1>
                 <div id="treecontrol">
                     <ul>
@@ -591,23 +591,70 @@ jQuery.cookie = function(name, value, options) {
             </div>
             <div id="content">
                 <ul id="tree">
-                    <li xmlns="" class="level top open">
+                    <li xmlns="" class="level top failed open">
                         <span><em class="time">
-                                <div class="time">22.79 s</div>
+                                <div class="time">3 m 23 s</div>
                             </em>test1</span>
                         <ul>
-                            <li class="level suite open">
+                            <li class="level suite failed open">
                                 <span><em class="time">
-                                        <div class="time">22.79 s</div>
+                                        <div class="time">3 m 23 s</div>
                                     </em>SimpleTest</span>
                                 <ul>
                                     <li class="level test">
                                         <span><em class="time">
-                                                <div class="time">22.79 s</div>
+                                                <div class="time">30.65 s</div>
                                             </em><em class="status">passed</em>test1_signInSignOut</span>
+                                    </li>
+                                    <li class="level test">
+                                        <span><em class="time">
+                                                <div class="time">27.70 s</div>
+                                            </em><em class="status">passed</em>test2_signup</span>
+                                    </li>
+                                    <li class="level test">
+                                        <span><em class="time">
+                                                <div class="time">32.56 s</div>
+                                            </em><em class="status">passed</em>test3_adView</span>
+                                    </li>
+                                    <li class="level test">
+                                        <span><em class="time">
+                                                <div class="time">19.17 s</div>
+                                            </em><em class="status">passed</em>test5_adViewWithOutSignIn</span>
+                                    </li>
+                                    <li class="level test">
+                                        <span><em class="time">
+                                                <div class="time">30.70 s</div>
+                                            </em><em class="status">passed</em>test6_PostAD</span>
+                                    </li>
+                                    <li class="level test failed open">
+                                        <span><em class="time">
+                                                <div class="time">31.51 s</div>
+                                            </em><em class="status">failed</em>test7_PostAD_WithIntentionallyError</span>
                                         <ul>
                                             <li class="text">
-                                                <span class="stderr">Ran 1 test in 22.794s<br/>OK<br/></span>
+                                                <span class="stderr">matched<br/>Your AD is != Your AD is posted<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">Expected :<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stderr">Your AD is posted<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stdout">Actual   :<br/></span>
+                                            </li>
+                                            <li class="text">
+                                                <span class="stderr">Your AD is<br/>Traceback (most recent call last):<br/>  File &quot;C:\Program Files\JetBrains\PyCharm Community Edition with Anaconda plugin 2019.2.3\helpers\pycharm\teamcity\diff_tools.py&quot;, line 32, in _patched_equals<br/>    old(self, first, second, msg)<br/>  File &quot;C:\Users\user 1\AppData\Local\Programs\Python\Python38-32\lib\unittest\case.py&quot;, line 912, in assertEqual<br/>    assertion_func(first, second, msg=msg)<br/>  File &quot;C:\Users\user 1\AppData\Local\Programs\Python\Python38-32\lib\unittest\case.py&quot;, line 1292, in assertMultiLineEqual<br/>    self.fail(self._formatMessage(msg, standardMsg))<br/>  File &quot;C:\Users\user 1\AppData\Local\Programs\Python\Python38-32\lib\unittest\case.py&quot;, line 753, in fail<br/>    raise self.failureException(msg)<br/>AssertionError: &#39;Your AD is posted&#39; != &#39;Your AD is&#39;<br/>- Your AD is posted<br/>?           -------<br/>+ Your AD is<br/> : matched<br/>During handling of the above exception, another exception occurred:<br/>Traceback (most recent call last):<br/>  File &quot;C:\Users\user 1\AppData\Local\Programs\Python\Python38-32\lib\unittest\case.py&quot;, line 60, in testPartExecutor<br/>    yield<br/>  File &quot;C:\Users\user 1\AppData\Local\Programs\Python\Python38-32\lib\unittest\case.py&quot;, line 676, in run<br/>    self._callTestMethod(testMethod)<br/>  File &quot;C:\Users\user 1\AppData\Local\Programs\Python\Python38-32\lib\unittest\case.py&quot;, line 633, in _callTestMethod<br/>    method()<br/>  File &quot;D:\github uploads\software dev project\testingForProject\testing\test1.py&quot;, line 180, in test7_PostAD_WithIntentionallyError<br/>    self.assertEqual(self.driver.find_element(By.XPATH, &#39;/html/body/div/div/div/p[2]&#39;).text,&#39;Your AD is&#39; , &quot;matched&quot;)  # should be passed<br/></span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="level test">
+                                        <span><em class="time">
+                                                <div class="time">31.19 s</div>
+                                            </em><em class="status">passed</em>test8_PredictingHousePrice</span>
+                                        <ul>
+                                            <li class="text">
+                                                <span class="stderr">Ran 7 tests in 203.485s<br/>FAILED (failures=1)<br/></span>
                                             </li>
                                         </ul>
                                     </li>
@@ -619,7 +666,7 @@ jQuery.cookie = function(name, value, options) {
             </div>
         </div>
         <div id="footer">
-            <p>Generated by PyCharm on 3/3/21, 10:14 AM</p>
+            <p>Generated by PyCharm on 3/29/21, 12:27 PM</p>
         </div>
     </body>
 </html>

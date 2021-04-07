@@ -129,7 +129,7 @@ def home(request):
                 Ads= select
             return render(request, 'home.html', {'obj': Ads, 'lo': lo,'se':se})
 
-    return render(request, 'home.html',{'obj':Ads})
+    return render(request, 'about/ads.html',{'obj':Ads})
 
 
 def activation(request):
