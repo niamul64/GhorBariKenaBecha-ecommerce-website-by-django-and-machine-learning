@@ -1,6 +1,6 @@
 # GhorBariKenaBecha-ecommerce-website-by-django-and-machine-learning
 
-# [The website is deployed to this link:](http://niamul26.pythonanywhere.com)
+# [The website is deployed to this link:ttp: niamul26.pythonanywhere.com](http://niamul26.pythonanywhere.com)
 
 <br>
 Otherwise, if You want to deploy this website in local machine: (follow the steps)
